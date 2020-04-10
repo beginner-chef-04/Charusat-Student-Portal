@@ -1,0 +1,99 @@
+.wrapper{
+    margin-left:25px;
+    margin-right:25px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    height: 200px;
+    width:200px;
+    z-index: -5;
+    position: absolute;
+}
+            #subj1{
+                background-color: #303641;
+                height: 340px;
+                width: 250px;
+                margin-top: 50px;
+                margin-left: 33%;
+                transform: translate(-50%,0);
+                box-shadow: 0 0 6px rgba(0,0,0,90);
+                position: absolute;
+                z-index: -1;
+            }
+            #subj2{
+                background-color: #303641;
+                height: 340px;
+                width: 250px;
+                margin-top: 50px;
+                margin-left: 66%;
+                transform: translate(-50%,0);                
+                box-shadow: 0 0 6px rgba(0,0,0,90);
+                position: absolute;
+                z-index: -1;
+            }            
+
+
+            .subject_name{
+                font-family: Verdana;
+                font-size: 40px;
+                color: white;
+                position: relative;
+                margin-top: 250px;
+                text-align: center;
+            }
+
+        #wrapper_outer{border: 2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            width: 95%;
+           /* padding-left: 25px;
+            padding-right: 25px;*/
+            position: absolute;
+            height: 1000px;
+            z-index: -1;
+        }
+
+#counter1{
+position: absolute;
+    z-index: 9;
+}
+#counter2{
+position: absolute;
+    z-index: 9;
+}
+.circle1{
+    height: 170px;
+    width: 170px;
+    background-color:#303641;
+    border-radius: 50%;
+position: absolute;
+    z-index: 1;
+    margin-left: 14.7px;
+    margin-top: 15.3px;
+}
+.shadowring{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0,0,0,90);
+position: absolute;
+    z-index: 99;
+    margin-left: 14.7px;
+    margin-top: 15.3px;
+}
+.circle2{
+    height: 200px;
+    width: 200px;
+    background-color:#303641;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+.shadowring2{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 6px rgba(0,0,0,90);
+    z-index: -1;
+}
