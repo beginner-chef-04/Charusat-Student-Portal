@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url='https://www.youtube.com/watch?v=zjo9yFHoUl8'
+url=''         # type the staring url here
 source_code=requests.get(url)
 plain_text=source_code.text
 

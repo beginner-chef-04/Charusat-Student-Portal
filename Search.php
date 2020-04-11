@@ -13,7 +13,8 @@
        #bar:hover{box-shadow: 0 0 9px rgba(0,0,0,100);}
        #sub{ border-radius: 6px; background-color: #373b3d;font-family: Arial;font-size: 20px;color: grey;border: 2px solid #373b3d;box-shadow: 0 0 6px rgba(0,0,0,90);padding: 10px 15px; }
        #sub:hover{cursor: pointer;box-shadow: 0 0 9px rgba(0,0,0,100);}
-       #result{padding: 20px;font-family: Arial;font-size: 20px;color: white;border: 2px solid black;padding-left: 80px;}
+       #result{padding: 20px;font-family: Arial;font-size: 20px;color: white;padding-left: 80px;}
+       #greyy{color: grey;}
     </style>
 </head>
 
@@ -26,14 +27,14 @@
         <input id="sub" type="submit" name="submit" value="Search">
         </form></center>   
         <br><br>
-        <div id="result">asd</div>
+        <div id="result"></div>
     </div>
 
 
   <?php  
 
         session_start();
-        /*error_reporting(E_ERROR | E_WARNING | E_PARSE);*/
+        error_reporting(E_ERROR | E_WARNING | E_PARSE);
         $qur = $_GET['search'];
         $sub = $_GET['submit'];
         $con=mysqli_connect("localhost","root","","login_db");
@@ -54,11 +55,11 @@
 
             if($x==1)
             {
-               $construct .="title LIKE '%$srch_each%'";
+               $construct .="keywords LIKE '%$srch_each%'";
             }
             else
             {
-               $construct .="OR title LIKE '%$srch_each%'";
+               $construct .="OR keywords LIKE '%$srch_each%'";
             }
 
         }
@@ -80,14 +81,18 @@
              {
                 
                 $title = $runrows ['title'];
+                $url = $runrows ['url'];                
                 $desc = $runrows ['description'];
-                $url = $runrows ['url'];
 
                 echo "<script>
                     var di=document.createElement('div');
                     var h2i=document.createElement('h2');
                     var ai=document.createElement('a');
+                    ai.setAttribute('href','$url');
+                    ai.setAttribute('target','_blank');
+                    ai.setAttribute('id','greyy');                    
                     var pi=document.createElement('p');
+                    pi.setAttribute('align','justify');
                     var hr=document.createElement('hr');
                     var re=document.getElementById('result');
 

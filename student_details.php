@@ -56,6 +56,7 @@
 
     <?php
     session_start();
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
     	echo "	<script>
                 var x=document.getElementsByClassName('name');
 				x[0].innerHTML='".$_SESSION['name']."';

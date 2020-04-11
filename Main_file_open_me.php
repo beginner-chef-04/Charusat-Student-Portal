@@ -50,7 +50,7 @@
 
     <?php
     	session_start();
-      /*error_reporting(E_ERROR | E_WARNING | E_PARSE);*/
+        error_reporting(E_ERROR | E_WARNING | E_PARSE);
     	$usr = $_GET['username'];
 		$pw = $_GET['password'];
 		$con=mysqli_connect("localhost","root","","login_db");
